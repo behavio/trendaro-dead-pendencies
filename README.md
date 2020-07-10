@@ -1,0 +1,1 @@
+# trendaro-dead-pendencies
