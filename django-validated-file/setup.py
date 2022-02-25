@@ -19,9 +19,8 @@ setup(
     },
     packages = find_packages(),
     install_requires=[
-        'distribute',
         'python-magic >= 0.4.2',
-        'django-chamber>=0.1.7',
+        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-chamber-0.1.7.tar.gz',
     ],
     setup_requires = [
         'versiontools >= 1.8',
@@ -35,8 +34,5 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Topic :: Internet :: WWW/HTTP',
-    ],
-    dependency_links=[
-        'https://github.com/matllubos/django-chamber/tarball/0.1.7#egg=django-chamber-0.1.7'
     ],
 )

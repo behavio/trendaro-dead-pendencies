@@ -1,28 +1,21 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-from security.version import get_version
+from setuptools import setup, find_packages
 
-try:
-    from setuptools import setup, find_packages
-except ImportError:
-    import ez_setup
-    ez_setup.use_setuptools()
-    from setuptools import setup, find_packages
+from block_snippets import get_version
 
 setup(
-    name='django-security',
+    name='django-block-snippets',
     version=get_version(),
-    description="Django security library.",
-    keywords='django, throttling',
+    description="Django block snippets.",
+    keywords='django, snippets',
     author='Lubos Matl',
     author_email='matllubos@gmail.com',
-    url='https://github.com/matllubos/django-security',
+    url='https://github.com/matllubos/django-block-snippets',
     license='LGPL',
-    package_dir={'security': 'security'},
+    package_dir={'block_snippets': 'block_snippets'},
     include_package_data=True,
     packages=find_packages(),
     classifiers=[
-        'Development Status :: 0 - Beta',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
@@ -36,8 +29,6 @@ setup(
     ],
     install_requires=[
         'django>=1.6',
-        'django-json-field @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-json-field-0.5.8.tar.gz',
-        'django-ipware>=1.0.0',
     ],
     zip_safe=False
 )
