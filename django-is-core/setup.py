@@ -33,11 +33,11 @@ setup(
         'python-dateutil>=2.2',
         'pytz',
         'factory-boy>=2.5.2',
-        'django-apptemplates @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-apptemplates-0.3.tar.gz',
-        'django-piston @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-piston-1.2.10.tar.gz',
-        'django-block-snippets @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-block-snippets-0.1.1.tar.gz',
-        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-chamber-0.1.7.tar.gz',
-        'django-project-info @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-project-info-0.2.5.tar.gz',
+        'django-apptemplates @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-apptemplates-0.3.tar.gz',
+        'django-piston @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-piston-1.2.10.tar.gz',
+        'django-block-snippets @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-block-snippets-0.1.1.tar.gz',
+        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-chamber-0.1.7.tar.gz',
+        'django-project-info @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-project-info-0.2.5.tar.gz',
     ],
     zip_safe=False
 )

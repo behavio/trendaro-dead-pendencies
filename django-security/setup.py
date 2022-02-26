@@ -36,7 +36,7 @@ setup(
     ],
     install_requires=[
         'django>=1.6',
-        'django-json-field @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-json-field-0.5.8.tar.gz',
+        'django-json-field @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-json-field-0.5.8.tar.gz',
         'django-ipware>=1.0.0',
     ],
     zip_safe=False

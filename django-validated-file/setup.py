@@ -20,7 +20,7 @@ setup(
     packages = find_packages(),
     install_requires=[
         'python-magic >= 0.4.2',
-        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-chamber-0.1.7.tar.gz',
+        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-chamber-0.1.7.tar.gz',
     ],
     setup_requires = [
         'versiontools >= 1.8',

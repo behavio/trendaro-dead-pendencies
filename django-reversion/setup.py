@@ -32,7 +32,7 @@ setup(
     cmdclass = cmdclass,
     install_requires = [
         'django>=1.7',
-        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-chamber-0.1.7.tar.gz'
+        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-chamber-0.1.7.tar.gz'
     ],
     extras_require = {
         'diff': [

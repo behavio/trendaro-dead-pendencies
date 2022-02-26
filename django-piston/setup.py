@@ -25,8 +25,8 @@ setup(
     ],
     install_requires=[
         'django>=1.8',
-        'mimeparse @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/mimeparse-0.1.4.tar.gz',
-        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.1/django-chamber-0.1.7.tar.gz'
+        'mimeparse @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/mimeparse-0.1.4.tar.gz',
+        'django-chamber @ https://github.com/behavio/trendaro-dead-pendencies/releases/download/v1.2/django-chamber-0.1.7.tar.gz'
     ],
     zip_safe=False
 )
