@@ -1,15 +1,20 @@
 from __future__ import unicode_literals
 
 from django.core.exceptions import ValidationError
-from django.db.models import CharField
-from django.db.models import AutoField
 from django.db import models
-from django.utils.crypto import get_random_string
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import force_text
-
+from django.db.models.query_utils import DeferredAttribute
 from chamber.exceptions import PersistenceException
 
+def get_deferred_field_names(instance):
+    """
+    Returns a set containing names of deferred fields for this instance.
+    """
+    return {
+        f.name for f in instance._meta.concrete_fields
+        if isinstance(instance.__class__.__dict__.get(f.attname), DeferredAttribute)
+    }
 
 def model_to_dict(instance, fields=None, exclude=None):
     """
@@ -82,9 +87,13 @@ class ModelDiffMixin(object):
 
     @property
     def _dict(self):
-        return model_to_dict(self, fields=[field.name for field in
-                             self._meta.fields])
-
+        fields = [
+            field.name
+            for field in self._meta.fields
+        ]
+        # need to use the local alternative to get_deferred_fields
+        # because this class uses .name instead of .attname
+        return model_to_dict(self, fields=fields, exclude=get_deferred_field_names(self))
 
 class ComparableModelMixin(object):
 
@@ -134,7 +143,7 @@ class SmartModel(AuditModel):
         change = bool(self.pk)
         self.pre_save(change, *args, **kwargs)
         try:
-            self.full_clean()
+            self.full_clean(exclude=self.get_deferred_fields())
         except ValidationError as er:
             if hasattr(er, 'error_dict'):
                 raise PersistenceException(', '.join(
